@@ -1,22 +1,23 @@
 #include <iostream>
 using namespace std;
 
-void fabo(int q){
-    int sum=0,f=0,s=1,n,i;
+int fabo(int q){
+    int sum=0,f=0,s=1,n,i,t;
     for(i=0;i<q;i++){
     
-    cout<<f<<" ";
+    t=f;
     sum+=f;
     n=f+s;
     f=s;
-    s=n;
-  
+    s=n;;
   }
+  return t;
 }
 int main(){
-    int x;
+    int x,s=0;
     cout<<"enter nth term"<<endl;
     cin>>x;
-    fabo(x);
+    s=fabo(x);
+    cout<<"the nth term of series is: "<<s;
 return 0 ;
 }
